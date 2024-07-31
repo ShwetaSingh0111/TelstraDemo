@@ -61,13 +61,14 @@
       const currPageUrl = window.location.href;
      console.log("inside SDE function*********************");
         console.log(currPageUrl);
+        const custInfo=document.cookie;
 
 
       lpTag.sdes = lpTag.sdes || [];
       lpTag.sdes.push(
         {
-          "type": "cart",  //MANDATORY
-          "total": 0,
+          "type": "customerInfo",  //MANDATORY
+          "total": custInfo,
           "currency": currPageUrl,
           "numItems": 0,
           "products": [{
