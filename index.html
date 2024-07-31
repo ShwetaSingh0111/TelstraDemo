@@ -64,7 +64,7 @@
         try{
          document.cookie = "username=Shweta Singh; expires=Thu, 18 Dec 2025 12:00:00 UTC";
 
-        custInfo=document.cookie;
+        custInfo=document.cookie.username;
         console.log(custInfo);
 
         }
@@ -81,7 +81,7 @@
           "numItems": 0,
           "products": [{
             "product": {
-              "name": custInfo.username,
+              "name": custInfo,
               "category": " "
             },
           }]
