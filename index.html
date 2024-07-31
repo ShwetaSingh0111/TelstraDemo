@@ -76,13 +76,14 @@
       lpTag.sdes.push(
         {
           "type": "customerInfo",  //MANDATORY
-          "total": custInfo,
+          "total": 0,
           "currency": currPageUrl,
           "numItems": 0,
           "products": [{
             "product": {
               "name": currPageUrl,
-              "category": " "
+              "category": " ",
+                "cookieVal":custInfo
 
             },
           }]
