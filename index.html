@@ -79,7 +79,12 @@
         
 lpTag.identities.push(identityFn);
     function identityFn(callback) {
-      callback(id_token);
+      callback({
+          iss: "https://jwt.io/",
+          acr: "loa1",
+          tkn: id_token
+      }
+      );
     }
 
    
