@@ -75,20 +75,22 @@
             console.log(ex);
         }
         */
- lpTag.identities.push(identityFn);
-  function identityFn(callback) {
+lpTag.identities.push(identityFn);
+    function identityFn(callback) {
       callback({
-         "sub": "825513",
+        "sub": "825513",
         "iss": "https://jwt.io/",
         "name":"Shweta Singh",
         "aud": "acc:qa57221676",
+        "admin":true,
         "exp": 1992025992,
         "iat": 1682030954,
         "acr": "loa1"
       });
-  }
-    //var id_token ="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4MjU1MTMiLCJpc3MiOiJodHRwczovL2p3dC5pby8iLCJuYW1lIjoiU2h3ZXRhIFNpbmdoIiwiYXVkIjoiYWNjOnFhNTcyMjE2NzYiLCJhZG1pbiI6dHJ1ZSwiZXhwIjoxOTkyMDI1OTkyLCJpYXQiOjE2ODIwMzA5NTQsImFjciI6ImxvYTEifQ.oO8n7GZqH-a0PxNQKMlr4LTrNtbDOQ71zIEU5H_O0W43cH7g79BIGZMV2FADZYpHX3X8vU4VCfLOHWp0vGmjNgJCH70_6ri4y1t-UsoIgvorRVhPC-dErhPytxH7zjzP_9zvWJNPOUV8LWuaSxyS0f65fV1LFz5I20PTGb5Qzzu-ILe-MZYBx4dqndG-9YhuL9b6xM9lwA_EzGXXOd_-9X1S9Jfuyw5h2n82-auOebhHD6-O-my2a3pwJ3iXSyl30c-eLTrEY7oIk0XutNSKeHr1EiRG9hykEnGw8saDmDP7jsor0qH8wDWNLOZEwhqz-2k-k_uYTF_801H8FpHkUw";
-    var id_token ="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4MjU1MTMiLCJpc3MiOiJodHRwczovL2p3dC5pby8iLCJuYW1lIjoiU2h3ZXRhIFNpbmdoIiwiYXVkIjoiYWNjOnFhNTcyMjE2NzYiLCJleHAiOjE5OTIwMjU5OTIsImlhdCI6MTY4MjAzMDk1NCwiYWNyIjoibG9hMSJ9.Ririywpq_v7HNk9I6J99no6fWNZE_3LVMHF81i-4ekBnSA1Xd9bcS9xNQf9mjEvmp09L7mEOgpM64MFDzMyFjwRzdFb3EvCx3oVUeureIGd-dro18l-N_-cnZtt2Z0QDZIp5JwwQ07Y6a34mBw9uRVSVefweTEWz9FTnaJ6U_-18ldznMcGgb1YO_-efBq_vWDvBtW9alJQkv2WRPrvv4kC15XDw3zRWan8Rka3MtgLcl5E6ITFF8wnwiZabg52eBusubSFmBlH_-OD74fmYJ-qfAQ94y7AmXbEYGSm7scAraSnuvYak7IQbyWwuQABZIvvuSH3EweA7GzcwYfi68A";
+    }
+
+    var id_token ="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4MjU1MTMiLCJpc3MiOiJodHRwczovL2p3dC5pby8iLCJuYW1lIjoiU2h3ZXRhIFNpbmdoIiwiYXVkIjoiYWNjOnFhNTcyMjE2NzYiLCJhZG1pbiI6dHJ1ZSwiZXhwIjoxOTkyMDI1OTkyLCJpYXQiOjE2ODIwMzA5NTQsImFjciI6ImxvYTEifQ.oO8n7GZqH-a0PxNQKMlr4LTrNtbDOQ71zIEU5H_O0W43cH7g79BIGZMV2FADZYpHX3X8vU4VCfLOHWp0vGmjNgJCH70_6ri4y1t-UsoIgvorRVhPC-dErhPytxH7zjzP_9zvWJNPOUV8LWuaSxyS0f65fV1LFz5I20PTGb5Qzzu-ILe-MZYBx4dqndG-9YhuL9b6xM9lwA_EzGXXOd_-9X1S9Jfuyw5h2n82-auOebhHD6-O-my2a3pwJ3iXSyl30c-eLTrEY7oIk0XutNSKeHr1EiRG9hykEnGw8saDmDP7jsor0qH8wDWNLOZEwhqz-2k-k_uYTF_801H8FpHkUw";
+    
     function lpGetAuthenticationToken(callback) {
       console.log("LP asked for id_token or auth code in Code Flow");
       // Do your magic…
@@ -97,6 +99,7 @@
       // On Failure
       callback("", "error reason");
     }
+
     /*
       lpTag.sdes = lpTag.sdes || [];
       lpTag.sdes.push(
